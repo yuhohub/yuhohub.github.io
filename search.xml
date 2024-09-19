@@ -1,197 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>tmux</title>
-      <link href="/2024/09/19/tmux/"/>
-      <url>/2024/09/19/tmux/</url>
-      
-        <content type="html"><![CDATA[<p>新建会话</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux new-session -s sessionName</span><br></pre></td></tr></table></figure><p>退出并结束</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure><p>分离会话不结束</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux detach</span><br></pre></td></tr></table></figure><p>重新接入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux attach -t sessionname</span><br></pre></td></tr></table></figure><pre><code>tmux kill-session -t sessionNametmux lstmux switch -t sessionName</code></pre>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> pytorch </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>最长的字母序连续子字符串的长度</title>
-      <link href="/2024/09/19/%E6%9C%80%E9%95%BF%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BA%8F%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%95%BF%E5%BA%A6/"/>
-      <url>/2024/09/19/%E6%9C%80%E9%95%BF%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BA%8F%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%95%BF%E5%BA%A6/</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://gitee.com/yuhoooo/picgo/raw/master/image/%E6%9C%80%E9%95%BF%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BA%8F%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%95%BF%E5%BA%A6.png"></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">longestContinuousSubstring</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> cur = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == s[i - <span class="number">1</span>] + <span class="number">1</span>) &#123;</span><br><span class="line">                cur++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            res = <span class="built_in">max</span>(res, cur);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> leetcode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>连接外网mysql</title>
-      <link href="/2024/09/18/%E8%BF%9E%E6%8E%A5%E5%A4%96%E7%BD%91mysql/"/>
-      <url>/2024/09/18/%E8%BF%9E%E6%8E%A5%E5%A4%96%E7%BD%91mysql/</url>
-      
-        <content type="html"><![CDATA[<p>use mysql<br>update user set host&#x3D;’%’ where user&#x3D;‘root’;<br>flush privileges;</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>npm切换镜像</title>
-      <link href="/2024/09/18/%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%B7%98%E5%AE%9D%E7%9A%84%E9%95%9C%E5%83%8F%E6%BA%90/"/>
-      <url>/2024/09/18/%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%B7%98%E5%AE%9D%E7%9A%84%E9%95%9C%E5%83%8F%E6%BA%90/</url>
-      
-        <content type="html"><![CDATA[<h3 id="设置为淘宝的镜像源"><a href="#设置为淘宝的镜像源" class="headerlink" title="设置为淘宝的镜像源"></a>设置为淘宝的镜像源</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><h3 id="设置为官方镜像源"><a href="#设置为官方镜像源" class="headerlink" title="设置为官方镜像源"></a>设置为官方镜像源</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmjs.org</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> npm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>解决端口占用</title>
-      <link href="/2024/09/18/%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/"/>
-      <url>/2024/09/18/%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<ul><li>查看windows所有端口进程点击开始菜单选择运行（win+r），接着在运行对话框中输入“cmd”，回车打开命令提示符窗口，然后在窗口中输入netstat -ano | findstr 8080，回车，之后就会显示所有的端口占用情况。</li><li>找到占有8080这个程序的进程ID：7172</li><li>输入命令tasklist|findstr “7172”  &#x2F; taskkill &#x2F;pid 7172 &#x2F;f，7172就是进程ID&#x2F;或者打开任务管理器，在详细信息中手动关闭对应ID的服务</li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> windows </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Windows删除百度网盘的右键上传</title>
-      <link href="/2024/09/18/%E5%88%A0%E9%99%A4%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9A%84%E5%8F%B3%E9%94%AE%E4%B8%8A%E4%BC%A0/"/>
-      <url>/2024/09/18/%E5%88%A0%E9%99%A4%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9A%84%E5%8F%B3%E9%94%AE%E4%B8%8A%E4%BC%A0/</url>
-      
-        <content type="html"><![CDATA[<p>计算机\HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\YunShellExt</p><p>计算机\HKEY_CLASSES_ROOT*\shellex\ContextMenuHandlers\YunShellExt</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> windows </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>windows虚拟机导致端口占用</title>
-      <link href="/2024/09/18/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AF%BC%E8%87%B4%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/"/>
-      <url>/2024/09/18/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AF%BC%E8%87%B4%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<p>netsh int ipv4 show excludedportrange protocol&#x3D;tcp</p><p>netsh int ipv4 set dynamic tcp start&#x3D;49152 num&#x3D;4000</p><p>netsh int ipv6 set dynamic tcp start&#x3D;49152 num&#x3D;4000</p><p>netsh int ipv4 add excludedportrange protocol&#x3D;tcp startport&#x3D;8000 numberofports&#x3D;2000</p><p>netstat -ano | findstr 8848<br>netstat -ano | findstr 9848<br>netstat -ano | findstr 9849</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> windows </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux开放端口</title>
-      <link href="/2024/09/18/linux%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3/"/>
-      <url>/2024/09/18/linux%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=8088/tcp --permanent firewall-cmd -reload</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2024/09/18/hello-world/"/>
-      <url>/2024/09/18/hello-world/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><h3 id="start-service"><a href="#start-service" class="headerlink" title="start service"></a>start service</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>docker linux mmdetection</title>
-      <link href="/2024/09/18/docker/"/>
-      <url>/2024/09/18/docker/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -itd --gpus=all   --name=mmdetv3 --shm-size=<span class="string">&quot;16g&quot;</span> -v /home/yyh/work:/docker mmdetv3:3.2.0  /bin/bash</span></span><br><span class="line"></span><br><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -itd --gpus=all   --name=mmdetv3_test --shm-size=<span class="string">&quot;16g&quot;</span> -v /home/yyh/work:/docker mmdetv3:3.2.0  /bin/bash</span></span><br><span class="line"></span><br><span class="line">docker exec -it mmdetv3 /bin/bash</span><br><span class="line"></span><br><span class="line">scp mmdetv3.tar.gz yyh@<span class="number">10.249</span>.<span class="number">188.179</span>:~/work/mmdetv3.tar.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scp data.tar.gz yyh@<span class="number">10.249</span>.<span class="number">191.185</span>:~/work/data.tar.gz</span><br><span class="line">或者 </span><br><span class="line">scp local_file remote_username@remote_ip:remote_file </span><br><span class="line">或者 </span><br><span class="line">scp local_file remote_ip:remote_folder </span><br><span class="line">或者 </span><br><span class="line">scp local_file remote_ip:remote_file </span><br><span class="line"></span><br><span class="line">docker export mmdetv3_test &gt; mmdetv3.tar.gz</span><br><span class="line">docker import - mmdetv3:<span class="number">3.2</span>.<span class="number">0</span> &lt; mmdetv3.tar.gz</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">watch -n 1 -d nvidia-smi</span><br><span class="line"></span><br><span class="line">nohup bash train.sh &gt; train.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">tmux new -s &lt;session-name&gt;</span><br><span class="line">tmux detach</span><br><span class="line">tmux attach -t &lt;session-name&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">pip install -v -e .</span><br><span class="line">python setup.py install</span><br><span class="line">python setup.py develop</span><br><span class="line"></span><br><span class="line">ps aux | grep &quot;tools/train.py&quot; | awk &#x27;&#123;print $2&#125;&#x27; | xargs kill -9</span><br><span class="line"></span><br><span class="line">ps -ef | grep main.py | grep -v grep | awk &#x27;&#123;print $2&#125;&#x27; | xargs kill -9</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"> python -m torch.distributed.launch \</span><br><span class="line">    --nnodes=1 \</span><br><span class="line">    --node_rank=0 \</span><br><span class="line">    --master_addr=<span class="string">&quot;127.0.0.1&quot;</span> \</span><br><span class="line">    --nproc_per_node=4 \</span><br><span class="line">    --master_port=29503 \</span><br><span class="line">    --use-env \</span><br><span class="line">    main.py \</span><br><span class="line">&gt;  rtdetr_pretrained.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=0,1,2,3 \</span><br><span class="line"><span class="built_in">nohup</span> python -m torch.distributed.launch \</span><br><span class="line">    --nnodes=1 \</span><br><span class="line">    --node_rank=0 \</span><br><span class="line">    --master_addr=<span class="string">&quot;127.0.0.1&quot;</span> \</span><br><span class="line">    --nproc_per_node=4 \</span><br><span class="line">    --master_port=29503 \</span><br><span class="line">    --use-env \</span><br><span class="line">    tools/train.py \</span><br><span class="line">&gt;  1.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=0 \</span><br><span class="line"><span class="built_in">nohup</span> python  tools/train.py \</span><br><span class="line">configs/a_llvip/dynamic-rcnn_info.py \</span><br><span class="line">--work-dir  coco/llvip/dynamic-rcnn_info \</span><br><span class="line">&gt;  0.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=1 \</span><br><span class="line"><span class="built_in">nohup</span> python  tools/train.py \</span><br><span class="line">configs/a_llvip/dynamic-rcnn_r50_fpn_1x_coco.py \</span><br><span class="line">--work-dir  coco/llvip/dynamic-rcnn \</span><br><span class="line">&gt;  1.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=2 \</span><br><span class="line"><span class="built_in">nohup</span> python  tools/train.py \</span><br><span class="line">configs/a_kaist/dynamic-rcnn_info.py \</span><br><span class="line">--work-dir  coco/kaist/dynamic-rcnn_info \</span><br><span class="line">&gt;  2.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=3 \</span><br><span class="line"><span class="built_in">nohup</span> python  tools/train.py \</span><br><span class="line">configs/a_kaist/dynamic-rcnn_r50_fpn_1x_coco.py \</span><br><span class="line">--work-dir  coco/kaist/dynamic-rcnn \</span><br><span class="line">&gt;  3.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">--resume temp_dir/epoch_17.pth \</span><br><span class="line">--resume infoDrop/yolox_res_train/epoch_20.pth \</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=0,1,2,3 \</span><br><span class="line"><span class="built_in">nohup</span> python -m torch.distributed.launch \</span><br><span class="line">    --nnodes=1 \</span><br><span class="line">    --node_rank=0 \</span><br><span class="line">    --master_addr=<span class="string">&quot;127.0.0.1&quot;</span> \</span><br><span class="line">    --nproc_per_node=4 \</span><br><span class="line">    --master_port=29503 \</span><br><span class="line">    tools/train.py \</span><br><span class="line">configs/a_flir/faster-rcnn_freq_info.py \</span><br><span class="line">--work-dir  freq/faster-rcnn/ \</span><br><span class="line">    --launcher pytorch \</span><br><span class="line">&gt;  0123.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=3 \</span><br><span class="line">python tools/test.py \</span><br><span class="line">result/flir/tood_info_train/tood_info.py \</span><br><span class="line">result/flir/tood_info_train/epoch_24.pth \</span><br><span class="line">--work-dir temp \</span><br><span class="line">--show-dir test_img \</span><br><span class="line">&gt;  test.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span>=<span class="string">&#x27;Pretrained&#x27;</span>, checkpoint=<span class="string">&#x27;torchvision://resnet50&#x27;</span></span><br><span class="line">open-mmlab://darknet53</span><br><span class="line">configs/a_llvip/yolov3_topk_info.py</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=3 \</span><br><span class="line"><span class="built_in">nohup</span> python tools/test.py \</span><br><span class="line">result/llvip/dynamic-rcnn_train/dynamic-rcnn_r50_fpn_1x_coco.py \</span><br><span class="line">result/llvip/dynamic-rcnn_train/epoch_24.pth \</span><br><span class="line">--work-dir temp \</span><br><span class="line">--show-dir test_img \</span><br><span class="line">&gt;  test.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> docker </tag>
-            
-            <tag> linux </tag>
-            
-            <tag> mmdection </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>docker linux mmdetection</title>
+    <url>/2024/09/18/docker/</url>
+    <content><![CDATA[<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -itd --gpus=all   --name=mmdetv3 --shm-size=<span class="string">&quot;16g&quot;</span> -v /home/yyh/work:/docker mmdetv3:3.2.0  /bin/bash</span></span><br><span class="line"></span><br><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -itd --gpus=all   --name=mmdetv3_test --shm-size=<span class="string">&quot;16g&quot;</span> -v /home/yyh/work:/docker mmdetv3:3.2.0  /bin/bash</span></span><br><span class="line"></span><br><span class="line">docker exec -it mmdetv3 /bin/bash</span><br><span class="line"></span><br><span class="line">scp mmdetv3.tar.gz yyh@<span class="number">10.249</span>.<span class="number">188.179</span>:~/work/mmdetv3.tar.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scp data.tar.gz yyh@<span class="number">10.249</span>.<span class="number">191.185</span>:~/work/data.tar.gz</span><br><span class="line">或者 </span><br><span class="line">scp local_file remote_username@remote_ip:remote_file </span><br><span class="line">或者 </span><br><span class="line">scp local_file remote_ip:remote_folder </span><br><span class="line">或者 </span><br><span class="line">scp local_file remote_ip:remote_file </span><br><span class="line"></span><br><span class="line">docker export mmdetv3_test &gt; mmdetv3.tar.gz</span><br><span class="line">docker import - mmdetv3:<span class="number">3.2</span>.<span class="number">0</span> &lt; mmdetv3.tar.gz</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">watch -n 1 -d nvidia-smi</span><br><span class="line"></span><br><span class="line">nohup bash train.sh &gt; train.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">tmux new -s &lt;session-name&gt;</span><br><span class="line">tmux detach</span><br><span class="line">tmux attach -t &lt;session-name&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -v -e .</span><br><span class="line">python setup.py install</span><br><span class="line">python setup.py develop</span><br><span class="line"></span><br><span class="line">ps aux | grep &quot;tools/train.py&quot; | awk &#x27;&#123;print $2&#125;&#x27; | xargs kill -9</span><br><span class="line"></span><br><span class="line">ps -ef | grep main.py | grep -v grep | awk &#x27;&#123;print $2&#125;&#x27; | xargs kill -9</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> python -m torch.distributed.launch \</span><br><span class="line">    --nnodes=1 \</span><br><span class="line">    --node_rank=0 \</span><br><span class="line">    --master_addr=<span class="string">&quot;127.0.0.1&quot;</span> \</span><br><span class="line">    --nproc_per_node=4 \</span><br><span class="line">    --master_port=29503 \</span><br><span class="line">    --use-env \</span><br><span class="line">    main.py \</span><br><span class="line">	&gt;  rtdetr_pretrained.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=0,1,2,3 \</span><br><span class="line"><span class="built_in">nohup</span> python -m torch.distributed.launch \</span><br><span class="line">    --nnodes=1 \</span><br><span class="line">    --node_rank=0 \</span><br><span class="line">    --master_addr=<span class="string">&quot;127.0.0.1&quot;</span> \</span><br><span class="line">    --nproc_per_node=4 \</span><br><span class="line">    --master_port=29503 \</span><br><span class="line">    --use-env \</span><br><span class="line">    tools/train.py \</span><br><span class="line">	&gt;  1.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=0 \</span><br><span class="line"><span class="built_in">nohup</span> python  tools/train.py \</span><br><span class="line">configs/a_llvip/dynamic-rcnn_info.py \</span><br><span class="line">--work-dir  coco/llvip/dynamic-rcnn_info \</span><br><span class="line">&gt;  0.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=1 \</span><br><span class="line"><span class="built_in">nohup</span> python  tools/train.py \</span><br><span class="line">configs/a_llvip/dynamic-rcnn_r50_fpn_1x_coco.py \</span><br><span class="line">--work-dir  coco/llvip/dynamic-rcnn \</span><br><span class="line">&gt;  1.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=2 \</span><br><span class="line"><span class="built_in">nohup</span> python  tools/train.py \</span><br><span class="line">configs/a_kaist/dynamic-rcnn_info.py \</span><br><span class="line">--work-dir  coco/kaist/dynamic-rcnn_info \</span><br><span class="line">&gt;  2.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=3 \</span><br><span class="line"><span class="built_in">nohup</span> python  tools/train.py \</span><br><span class="line">configs/a_kaist/dynamic-rcnn_r50_fpn_1x_coco.py \</span><br><span class="line">--work-dir  coco/kaist/dynamic-rcnn \</span><br><span class="line">&gt;  3.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">--resume temp_dir/epoch_17.pth \</span><br><span class="line">--resume infoDrop/yolox_res_train/epoch_20.pth \</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=0,1,2,3 \</span><br><span class="line"><span class="built_in">nohup</span> python -m torch.distributed.launch \</span><br><span class="line">    --nnodes=1 \</span><br><span class="line">    --node_rank=0 \</span><br><span class="line">    --master_addr=<span class="string">&quot;127.0.0.1&quot;</span> \</span><br><span class="line">    --nproc_per_node=4 \</span><br><span class="line">    --master_port=29503 \</span><br><span class="line">    tools/train.py \</span><br><span class="line">	configs/a_flir/faster-rcnn_freq_info.py \</span><br><span class="line">	--work-dir  freq/faster-rcnn/ \</span><br><span class="line">    --launcher pytorch \</span><br><span class="line">	&gt;  0123.<span class="built_in">log</span> 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=3 \</span><br><span class="line">python tools/test.py \</span><br><span class="line">result/flir/tood_info_train/tood_info.py \</span><br><span class="line">result/flir/tood_info_train/epoch_24.pth \</span><br><span class="line">--work-dir temp \</span><br><span class="line">--show-dir test_img \</span><br><span class="line">&gt;  test.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span>=<span class="string">&#x27;Pretrained&#x27;</span>, checkpoint=<span class="string">&#x27;torchvision://resnet50&#x27;</span></span><br><span class="line">open-mmlab://darknet53</span><br><span class="line">configs/a_llvip/yolov3_topk_info.py</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=3 \</span><br><span class="line"><span class="built_in">nohup</span> python tools/test.py \</span><br><span class="line">result/llvip/dynamic-rcnn_train/dynamic-rcnn_r50_fpn_1x_coco.py \</span><br><span class="line">result/llvip/dynamic-rcnn_train/epoch_24.pth \</span><br><span class="line">--work-dir temp \</span><br><span class="line">--show-dir test_img \</span><br><span class="line">&gt;  test.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>docker</tag>
+        <tag>linux</tag>
+        <tag>mmdection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/09/18/hello-world/</url>
+    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="start-service"><a href="#start-service" class="headerlink" title="start service"></a>start service</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>windows虚拟机导致端口占用</title>
+    <url>/2024/09/18/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AF%BC%E8%87%B4%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
+    <content><![CDATA[<p>netsh int ipv4 show excludedportrange protocol&#x3D;tcp</p>
+<p>netsh int ipv4 set dynamic tcp start&#x3D;49152 num&#x3D;4000</p>
+<p>netsh int ipv6 set dynamic tcp start&#x3D;49152 num&#x3D;4000</p>
+<p>netsh int ipv4 add excludedportrange protocol&#x3D;tcp startport&#x3D;8000 numberofports&#x3D;2000</p>
+<p>netstat -ano | findstr 8848<br>netstat -ano | findstr 9848<br>netstat -ano | findstr 9849</p>
+]]></content>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux开放端口</title>
+    <url>/2024/09/18/linux%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=8088/tcp --permanent firewall-cmd -reload</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows删除百度网盘的右键上传</title>
+    <url>/2024/09/18/%E5%88%A0%E9%99%A4%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9A%84%E5%8F%B3%E9%94%AE%E4%B8%8A%E4%BC%A0/</url>
+    <content><![CDATA[<p>计算机\HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\YunShellExt</p>
+<p>计算机\HKEY_CLASSES_ROOT*\shellex\ContextMenuHandlers\YunShellExt</p>
+]]></content>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决端口占用</title>
+    <url>/2024/09/18/%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
+    <content><![CDATA[<ul>
+<li>查看windows所有端口进程点击开始菜单选择运行（win+r），接着在运行对话框中输入“cmd”，回车打开命令提示符窗口，然后在窗口中输入netstat -ano | findstr 8080，回车，之后就会显示所有的端口占用情况。</li>
+<li>找到占有8080这个程序的进程ID：7172</li>
+<li>输入命令tasklist|findstr “7172”  &#x2F; taskkill &#x2F;pid 7172 &#x2F;f，7172就是进程ID&#x2F;或者打开任务管理器，在详细信息中手动关闭对应ID的服务</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm切换镜像</title>
+    <url>/2024/09/18/%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%B7%98%E5%AE%9D%E7%9A%84%E9%95%9C%E5%83%8F%E6%BA%90/</url>
+    <content><![CDATA[<h3 id="设置为淘宝的镜像源"><a href="#设置为淘宝的镜像源" class="headerlink" title="设置为淘宝的镜像源"></a>设置为淘宝的镜像源</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+<h3 id="设置为官方镜像源"><a href="#设置为官方镜像源" class="headerlink" title="设置为官方镜像源"></a>设置为官方镜像源</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npmjs.org</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>连接外网mysql</title>
+    <url>/2024/09/18/%E8%BF%9E%E6%8E%A5%E5%A4%96%E7%BD%91mysql/</url>
+    <content><![CDATA[<p>use mysql<br>update user set host&#x3D;’%’ where user&#x3D;‘root’;<br>flush privileges;</p>
+]]></content>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最长的字母序连续子字符串的长度</title>
+    <url>/2024/09/19/%E6%9C%80%E9%95%BF%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BA%8F%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%95%BF%E5%BA%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/yuhoooo/picgo/raw/master/image/%E6%9C%80%E9%95%BF%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BA%8F%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%95%BF%E5%BA%A6.png"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">longestContinuousSubstring</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> cur = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == s[i - <span class="number">1</span>] + <span class="number">1</span>) &#123;</span><br><span class="line">                cur++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            res = <span class="built_in">max</span>(res, cur);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tmux</title>
+    <url>/2024/09/19/tmux/</url>
+    <content><![CDATA[<p>新建会话</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux new-session -s sessionName</span><br></pre></td></tr></table></figure>
+
+<p>退出并结束</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<p>分离会话不结束</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux detach</span><br></pre></td></tr></table></figure>
+
+<p>重新接入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux attach -t sessionname</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux kill-session -t sessionName</span><br><span class="line">tmux ls</span><br><span class="line">tmux switch -t sessionName</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>linux</tag>
+        <tag>pytorch</tag>
+      </tags>
+  </entry>
 </search>
