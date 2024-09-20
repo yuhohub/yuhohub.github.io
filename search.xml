@@ -135,4 +135,33 @@
         <tag>pytorch</tag>
       </tags>
   </entry>
+  <entry>
+    <title>black-red tree</title>
+    <url>/2024/09/20/black-red%20tree/</url>
+    <content><![CDATA[<h1 id="black-red-tree"><a href="#black-red-tree" class="headerlink" title="black-red tree"></a>black-red tree</h1><pre><code>1.  节点颜色非红即黑
+2.  根节点颜色是黑色
+3.  叶子节点（空节点）颜色为黑色
+4.  红色节点的子节点（包括空节点）为黑色
+5.  某个节点下的所有路径，有相同的黑色节点（包括空节点（黑色））
+</code></pre>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">增加一个节点，节点颜色默认为红色</span><br><span class="line">1、判断插入节点是否为根节点，如果是根节点把当前节点置为根节点，并把颜色置为黑色</span><br><span class="line">2、判断父节点的颜色，如果父节点的颜色为黑色</span><br><span class="line">		不用处理，不违反红黑树的性质</span><br><span class="line">3、父节点是红色，叔叔节点也是红色</span><br><span class="line">		3.1、将父节点和叔叔节点设置为黑色，祖父节点设置为红色</span><br><span class="line">		3.2、以祖父节点为插入节点，在进行判断</span><br><span class="line">4、父节点是红色，叔叔节点是黑色orNULL</span><br><span class="line">		4.1、左左插入</span><br><span class="line">			父节点变成黑色，祖父节点变成红色，祖父节点右旋</span><br><span class="line">			</span><br><span class="line">		4.2、左右插入</span><br><span class="line">	    	父节左旋，之后父节点就变成了子节点</span><br><span class="line">	 	 	按照父节点为当前插入的红色节点，进行左左插入处理</span><br><span class="line">		4.3、右右插入</span><br><span class="line">			父节点变成黑色，祖父节点变成红色，祖父节点左旋</span><br><span class="line">		4.4、右左插入</span><br><span class="line">	    	父节点右旋，之后父节点变成了子节点</span><br><span class="line">	    	按照父节点为当前插入的红色节点，进行右右插入处理</span><br></pre></td></tr></table></figure>
+
+
+
+<p>l为插入节点</p>
+<p>4.1<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920170209657.png" alt="image-20240920170209657" style="zoom: 33%;" />4.2<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920170557167.png" alt="image-20240920170557167" style="zoom: 50%;float: right;" /></p>
+<p>4.3<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920200414358.png" alt="image-20240920200414358" style="zoom: 33%;" />4.4<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920200507182.png" alt="image-20240920200507182" style="zoom: 50%; float: right;" /></p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一.删除结点没有儿子的情况：</span><br><span class="line"></span><br><span class="line">1）删除结点为红色</span><br><span class="line">直接删除</span><br><span class="line"></span><br><span class="line">2）删除结点为黑色，其兄弟结点没有儿子</span><br><span class="line">1）先将D节点删除。    2）将P节点变成黑色，将B节点变成红色。</span><br><span class="line"></span><br><span class="line">3）删除结点为黑色，其兄弟结点有一个孩子不空，并且该孩子和兄弟结点在同一边（同为左子树或者同为右子树）：</span><br><span class="line"></span><br><span class="line">不管是括号中那种情况，先交换兄弟结点和父亲结点的颜色，并且把父亲结点和兄弟结点的子结点涂成黑色</span><br><span class="line"></span><br><span class="line">	2.1如果兄弟结点和兄弟结点的儿子都在右子树的话：对父亲结点进行左旋</span><br><span class="line"></span><br><span class="line">	2.2如果兄弟结点和兄弟结点的儿子都在左子树的话：对父亲结点进行右旋</span><br><span class="line"></span><br><span class="line">4）删除结点为黑色，其兄弟结点有一个孩子不空，并且该孩子和兄弟结点不在同一边（右左或者左右的情况）：</span><br><span class="line"></span><br><span class="line">	1.先将兄弟结点和兄弟结点的儿子结点颜色互换</span><br><span class="line"></span><br><span class="line">	2.1如果兄弟结点是左子树，兄弟结点的儿子结点是右子树：对兄弟结点进行左旋</span><br><span class="line"></span><br><span class="line">	2.2如果兄弟结点是右子树，兄弟结点的儿子结点是左子树：对兄弟结点进行右旋</span><br><span class="line">	2.3变化后成为3）的情况</span><br><span class="line"></span><br><span class="line">5）删除结点为黑色，其兄弟结点有两个孩子，而且兄弟结点为红色</span><br><span class="line"></span><br><span class="line">6）删除结点为黑色，其兄弟结点有两个孩子，而且兄弟结点为黑色</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">二.删除结点只有一个儿子的情况：</span><br><span class="line"></span><br><span class="line">1）删除结点为黑色，其唯一的儿子结点为红色（必定是红色，要不然不符合红黑树的第5条性质）</span><br><span class="line">删除结点为黑色，儿子结点无论左右都可以将儿子结点涂成黑色放到被删除结点的位置</span><br><span class="line"></span><br><span class="line">2）删除结点为红色，其儿子结点只能为黑：红黑树中不存在这种情况，要不然无法满足红黑树第5条性质</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">三.删除结点有两个儿子的情况：</span><br><span class="line">找到删除结点的右子树中最左的结点，两两值交换，然后删除结点的情况就变成了上面两种情况中的一种了</span><br><span class="line">1.删除结点只有一个儿子的情况</span><br><span class="line">2.删除结点没有儿子的情况</span><br></pre></td></tr></table></figure>
+
+<p>下图为删除结点没有儿子的情况的案例：</p>
+<p>1.2<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920211603340.png" alt="image-20240920211603340"></p>
+<p>1.3<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920212735591.png" alt="image-20240920212735591"></p>
+<p>1.4<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920212721716.png" alt="image-20240920212721716"></p>
+<p>1.5<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920214612878.png" alt="image-20240920214612878"></p>
+<p>1.6<img src="https://gitee.com/yuhoooo/picgo/raw/master/image/image-20240920214630523.png" alt="image-20240920214630523"></p>
+]]></content>
+      <tags>
+        <tag>algorithm</tag>
+      </tags>
+  </entry>
 </search>
