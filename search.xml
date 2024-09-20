@@ -138,12 +138,13 @@
   <entry>
     <title>black-red tree</title>
     <url>/2024/09/20/black-red%20tree/</url>
-    <content><![CDATA[<h1 id="black-red-tree"><a href="#black-red-tree" class="headerlink" title="black-red tree"></a>black-red tree</h1><pre><code>1.  节点颜色非红即黑
-2.  根节点颜色是黑色
-3.  叶子节点（空节点）颜色为黑色
-4.  红色节点的子节点（包括空节点）为黑色
-5.  某个节点下的所有路径，有相同的黑色节点（包括空节点（黑色））
-</code></pre>
+    <content><![CDATA[<h1 id="black-red-tree"><a href="#black-red-tree" class="headerlink" title="black-red tree"></a>black-red tree</h1><ol>
+<li>节点颜色非红即黑</li>
+<li>根节点颜色是黑色</li>
+<li>叶子节点（空节点）颜色为黑色</li>
+<li>红色节点的子节点（包括空节点）为黑色</li>
+<li>某个节点下的所有路径，有相同的黑色节点（包括空节点（黑色））</li>
+</ol>
 <h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">增加一个节点，节点颜色默认为红色</span><br><span class="line">1、判断插入节点是否为根节点，如果是根节点把当前节点置为根节点，并把颜色置为黑色</span><br><span class="line">2、判断父节点的颜色，如果父节点的颜色为黑色</span><br><span class="line">		不用处理，不违反红黑树的性质</span><br><span class="line">3、父节点是红色，叔叔节点也是红色</span><br><span class="line">		3.1、将父节点和叔叔节点设置为黑色，祖父节点设置为红色</span><br><span class="line">		3.2、以祖父节点为插入节点，在进行判断</span><br><span class="line">4、父节点是红色，叔叔节点是黑色orNULL</span><br><span class="line">		4.1、左左插入</span><br><span class="line">			父节点变成黑色，祖父节点变成红色，祖父节点右旋</span><br><span class="line">			</span><br><span class="line">		4.2、左右插入</span><br><span class="line">	    	父节左旋，之后父节点就变成了子节点</span><br><span class="line">	 	 	按照父节点为当前插入的红色节点，进行左左插入处理</span><br><span class="line">		4.3、右右插入</span><br><span class="line">			父节点变成黑色，祖父节点变成红色，祖父节点左旋</span><br><span class="line">		4.4、右左插入</span><br><span class="line">	    	父节点右旋，之后父节点变成了子节点</span><br><span class="line">	    	按照父节点为当前插入的红色节点，进行右右插入处理</span><br></pre></td></tr></table></figure>
 
 
