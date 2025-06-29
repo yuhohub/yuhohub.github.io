@@ -7887,7 +7887,7 @@ figure.highlight .code-expand-btn.expand-done {
 figure.highlight .code-expand-btn:not(.expand-done) ~ table,
 figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
   overflow: hidden;
-  height: 200px;
+  height: 20000px;
 }
 .search-dialog {
   position: fixed;
